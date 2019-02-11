@@ -1,0 +1,238 @@
+section {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.content {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		hr {
+			width: 100%;
+			position: relative;
+			margin-left: -20%;
+			border-color: white;
+		}
+		.meta {
+			position: relative;
+			margin-bottom: 20px;
+			.date {
+				color: map-get($foundation-palette, primary);
+				background: black;
+				padding: 10px 20px;
+				// height: 20px;
+				float: left;
+				position: relative;
+				margin-top: 6px;
+				font-size: rem-calc(12);
+				font-weight: 700;
+				font-style: italic;
+				margin-right: 35px;
+				// top: 50%;
+				// transform: translateY(-50%);
+			}
+			.user {
+				position: relative;
+				float: left;
+				.user_image {
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+					overflow: hidden;
+					float: left;
+					margin-right: 15px;
+				}
+				.user_name {
+					color: white;
+					float: left;
+					position: relative;
+					line-height: 45px;
+					font-weight: 900;
+					font-size: rem-calc(12);
+				}
+			}
+		}
+		@media (max-width: 370px){
+			.meta {
+				.date {
+					margin-top: 0;
+				}
+				.user {
+					margin-top: 10px;
+
+				}
+			}
+		}
+	}
+	&.featured-story {
+		height: 100vh;
+		.bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(30deg, #212121 0%, #212121 15%,transparent 75%, transparent 100%);
+		}
+		&:nth-child(odd) {
+
+		}
+		&:nth-child(even) {
+
+		}
+		@media (max-width: map-get($breakpoints, medium)){
+			.content {
+				transform: none;
+				top: auto;
+				bottom: 30px;
+				position: absolute;
+				width: 100%;
+				padding-left: 15px;
+				hr {
+					width: 120%;
+				}
+				h1 {
+					margin-left: 20px;
+				}
+				p {
+					font-size: rem-calc(14);
+				}
+				// .read-more {
+				// 	width: 100%;
+				// 	display: block;
+				// 	text-align: right;
+				// }
+			}
+		}
+	}
+	&.about {
+		height: calc(100vh - 110px);
+		.bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(30deg, #000000 0%, #000000 15%,transparent 75%, transparent 100%);
+		}
+		@media (max-width: map-get($breakpoints, medium)){
+			.content {
+				transform: none;
+				top: auto;
+				bottom: 30px;
+				position: absolute;
+				width: 100%;
+				padding-left: 15px;
+				hr {
+					width: 120%;
+				}
+				.read-more {
+					width: 100%;
+					display: block;
+					text-align: right;
+				}
+			}
+		}
+
+	}
+	.archive & {
+
+		&.posts {
+			article {
+				section {
+					padding-top: rem-calc(70);
+					padding-bottom: rem-calc(70);
+					color: map-get($foundation-palette,innerPageCopy);
+					background: white;
+					.cell {
+						position: relative;
+					}
+					&.grid-container {
+						padding-left: rem-calc(70);
+						padding-right: rem-calc(70);
+					}
+					.responsive-video {
+						width: 100%;
+						@include aspect-ratio(16,9);
+						margin-bottom: 30px;
+						iframe {
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							top: 0;
+						}
+					}
+					@media (max-width: map-get($breakpoints, medium)) {
+						padding: rem-calc(20);
+						&.grid-container {
+							padding: rem-calc(20);
+						}
+					}
+					.meta {
+						position: relative;
+						margin-bottom: 20px;
+						.date {
+							color: map-get($foundation-palette, primary);
+							background: black;
+							padding: 10px 20px;
+							// height: 20px;
+							float: left;
+							position: relative;
+							margin-top: 6px;
+							font-size: rem-calc(12);
+							font-weight: 700;
+							font-style: italic;
+							margin-right: 35px;
+							// top: 50%;
+							// transform: translateY(-50%);
+						}
+						.user {
+							position: relative;
+							float: left;
+							.user_image {
+								width: 45px;
+								height: 45px;
+								border-radius: 50%;
+								overflow: hidden;
+								float: left;
+								margin-right: 15px;
+							}
+							.user_name {
+								color: map-get($foundation-palette,innerPageCopy);
+								float: left;
+								position: relative;
+								line-height: 45px;
+								font-weight: 900;
+								font-size: rem-calc(12);
+							}
+						}
+					}
+					@media (max-width: 370px){
+						.meta {
+							.date {
+								margin-top: 0;
+							}
+							.user {
+								margin-top: 10px;
+
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	&.static {
+		background: black;
+		height: 100vh;
+		width: 100%;
+	}
+}

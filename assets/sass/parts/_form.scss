@@ -1,0 +1,30 @@
+form {
+	.half {
+		width: 50%;
+	}
+	.row {
+		margin: 0 !important;
+	}
+	.form-control {
+		font-size: rem-calc(16) !important;
+		margin-bottom: rem-calc(20) !important;
+	}
+	.cell.form-column {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+	.button {
+		font-weight: 900 !important;
+	}
+	input.parsley-error {
+		background-color: black;
+		border: 1px solid red;
+		box-shadow: 0 0 10px red;
+		color: white;
+		margin-bottom: 0 !important;
+	}
+	.parsley-required {
+		font-size: rem-calc(12);
+		color: red;
+	}
+}

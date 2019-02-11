@@ -1,0 +1,20 @@
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+	background-color: $from;
+	background: linear-gradient(to right, $from 0%, $to $stop);
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
