@@ -28910,7 +28910,7 @@ form select option {
   color: #fdc31d; }
 
 footer.main-footer {
-  padding-top: 4.5rem;
+  padding-top: 0;
   padding-bottom: 5rem; }
 
 @media (max-width: 800px) {
