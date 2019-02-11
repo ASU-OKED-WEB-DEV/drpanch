@@ -29591,6 +29591,8 @@ main article footer .post:hover .bg {
     text-align: right; } }
 
 .archive main article {
+  max-width: 1200px;
+  margin: 30px auto 0;
   padding-top: 15px;
   padding-bottom: 15px; }
 
