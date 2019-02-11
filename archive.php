@@ -26,9 +26,11 @@ get_header();
 		</header>
 		<section class="grid-container inner-page">
 			<?php
+            if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+              }
 			while ( have_posts() ) :
 				the_post();
-
 				?>
 				<article class="grid-x grid-padding-x">
 					<div class="featured-image cell large-4 small-12" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
