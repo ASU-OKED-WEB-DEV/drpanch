@@ -8,7 +8,9 @@
  */
 
 get_header();
+panch_breadcrumbs();
 ?>
+
 	<?php if ( have_posts() ) : ?>
 		<header class="small">
 			<div class="live-background" id="particles"></div>

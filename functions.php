@@ -320,3 +320,31 @@ function enqueue_load_fa() {
  
     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 }
+function panch_breadcrumbs() {
+    $show_on_homepage = 0;
+    $show_current = 1;
+    $delimiter = '&raquo;';
+    $home_url = 'Home';
+    $before_wrap = '<span clas="current">';
+    $after_wrap = '</span>';
+    
+    /* Don't change values below */
+    global $post;
+    $home_url = get_bloginfo( 'url' );
+    /* Check for homepage first! */
+    if ( is_home() || is_front_page() ) {
+        $on_homepage = 1;
+    }
+    if ( 0 === $show_on_homepage && 1 === $on_homepage ) return;
+    
+    /* Proceed with showing the breadcrumbs */
+    $breadcrumbs = '<ol id="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
+    
+    $breadcrumbs .= '<li itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a target="_blank" href="' . $home_url . '">' . $home_url . '</a></li>';
+    
+    /* Build breadcrumbs here */
+    
+    $breadcrumbs .= '</ol>';
+    
+    echo $breadcrumbs;
+}
