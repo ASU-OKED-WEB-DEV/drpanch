@@ -40,10 +40,6 @@ get_header();
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="meta clearfix">
 								<div class="date"><?= get_the_date("F j, Y"); ?></div>
-								<div class="user clearfix">
-									<div class="user_image"><?= get_avatar( $post->post_author ); ?></div>
-									<div class="user_name"><?php the_author_meta( 'nickname' , $post->post_author ); ?></div>
-								</div>
 							</div>
 						</header>
 						<section class="copy">
