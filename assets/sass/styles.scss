@@ -10242,9 +10242,9 @@ main {
       main section.inner-page .cell {
         position: relative; }
       main section.inner-page.grid-container {
-        padding-left: 0rem;
-        padding-right: 0rem;
-    max-width:1200px; }
+        padding-left: 0!important;
+        padding-right: 0!important;
+        max-width:1200px; }
       .archive main section.inner-page {
         padding-top: 0;
         padding-bottom: 0; }

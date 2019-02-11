@@ -29130,8 +29130,9 @@ main section.inner-page .cell {
   position: relative; }
 
 main section.inner-page.grid-container {
-  padding-left: 7rem;
-  padding-right: 7rem; }
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 1200px; }
 
 .archive main section.inner-page {
   padding-top: 0;
