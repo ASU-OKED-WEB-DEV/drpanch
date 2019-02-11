@@ -10,6 +10,9 @@
 get_header();
 ?>
 	<?php
+        if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+            }
 		while ( have_posts() ) : the_post();
 			$postCategory = '';
 			$postCategoryURL = '';
