@@ -8,7 +8,7 @@
  */
 
 get_header();
-panch_breadcrumbs();
+
 ?>
 
 	<?php if ( have_posts() ) : ?>
@@ -26,6 +26,7 @@ panch_breadcrumbs();
 		</header>
 		<section class="grid-container inner-page">
 			<?php
+            panch_breadcrumbs();
 			while ( have_posts() ) :
 				the_post();
 
