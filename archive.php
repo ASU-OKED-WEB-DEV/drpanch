@@ -33,8 +33,8 @@ get_header();
 				the_post();
 				?>
 				<article class="grid-x grid-padding-x">
-                <a href="<?php the_permalink(); ?>"><div class="featured-image cell large-4 small-12" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></a>
-					</div>
+                <a href="<?php the_permalink(); ?>"><div class="featured-image cell large-4 small-12" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+					</div></a>
 					<div class="content cell large-auto small-12">
 						<header>
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
