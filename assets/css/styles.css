@@ -20613,11 +20613,6 @@ ul.no-bullet, ol.no-bullet {
   margin-left: -1rem;
   margin-right: -1rem; }
 
-@media print, screen and (min-width: 40em) {
-  .grid-margin-x {
-    margin-left: -4rem;
-    margin-right: -4rem; } }
-
 .grid-margin-x > .cell {
   width: calc(100% - 2rem);
   margin-left: 1rem;
@@ -29592,7 +29587,7 @@ main article footer .post:hover .bg {
 
 .archive main article {
   max-width: 1200px;
-  margin: 30px auto 0;
+  margin: 30px auto 0 !important;
   padding-top: 15px;
   padding-bottom: 15px; }
 
