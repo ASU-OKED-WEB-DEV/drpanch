@@ -26,7 +26,6 @@ get_header();
 		</header>
 		<section class="grid-container inner-page">
 			<?php
-            panch_breadcrumbs();
 			while ( have_posts() ) :
 				the_post();
 
