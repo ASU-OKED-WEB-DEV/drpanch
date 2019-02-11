@@ -33,11 +33,11 @@ get_header();
 				the_post();
 				?>
 				<article class="grid-x grid-padding-x">
-					<div class="featured-image cell large-4 small-12" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+                <a href="<?php the_permalink(); ?>"><div class="featured-image cell large-4 small-12" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></a>
 					</div>
 					<div class="content cell large-auto small-12">
 						<header>
-							<h2><?php the_title(); ?></h2>
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="meta clearfix">
 								<div class="date"><?= get_the_date("F j, Y"); ?></div>
 								<div class="user clearfix">
