@@ -23,10 +23,12 @@ get_header();
 					break;
 				}
 			}
-	?>
+    ?>
+    	<header class="large" style="background-image: url(<?php the_post_thumbnail_url(); ?>); background-position: center <?php the_field('anchor_position'); ?>;"></header>
 	<article class="inner-page">
 
 		<section class="grid-container inner-page">
+        <p><a href="<?= $postCategoryURL; ?>" class="read-more">&laquo; <?= $postCategory; ?></a></p>
 			<div class="grid-x grid-padding-x">
 				<div class="cell small-12 large-9">
 					<h1><?php the_title(); ?></h1>
@@ -35,12 +37,12 @@ get_header();
 						<div class="date"><?= get_the_date("F j, Y"); ?></div>
 						<div class="user clearfix">
 							<div class="user_image"><?= get_avatar( $post->post_author ); ?></div>
-							<div class="user_name"><?php the_author_meta( 'nickname' , $post->post_author ); ?></div>
+							<div class="user_name">Dr. Panchanathan</div>
 						</div>
 					</div>
 					<?php the_content(); ?>
 
-					<a href="<?= $postCategoryURL; ?>" class="read-more">&laquo; <?= $postCategory; ?></a>
+					
 				</div>
 				<div class="cell large-auto keywords hide-for-small-only">
 					<?php
