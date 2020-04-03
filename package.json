@@ -2,7 +2,7 @@
   "name": "small-site",
   "version": "1.0.0",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.7",
     "foundation-sites": "^6.4.4-rc1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
